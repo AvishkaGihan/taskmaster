@@ -9,7 +9,11 @@ const TodoList: React.FC = () => {
   const { todos, isLoading, addTodo, toggleTodo, deleteTodo } = useTodos();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex justify-center items-center h-screen">
+        <div className="text-2xl font-bold text-gray-500">Loading...</div>
+      </div>
+    );
   }
 
   return (
